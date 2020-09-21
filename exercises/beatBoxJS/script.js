@@ -1,4 +1,4 @@
-
+  
 
 let beats = {
     "65": {
@@ -35,12 +35,11 @@ let beats = {
 
  */
 triggerBeat = (event) => {
-
+    console.log(event);
 }
 
 /**
  * Keydown listener to fire triggerBeat function
  */
-document.addEventListener('keydown', (event) => {
-    console.log(event);
-}
+document.addEventListener('keydown', (triggerBeat) => {
+})
