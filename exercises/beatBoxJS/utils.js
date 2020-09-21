@@ -21,6 +21,13 @@ class Button {
         this.setButtonColorInHTML
     }
 
+setAnTransitionEndListener = () => {
+    this.element.addEventListener('transitioned', () => {
+        console.log("transition ended");
+        this.deselect();
+    })
+}
+
     /**
      * Set the button color based on color specified
      */
@@ -36,5 +43,7 @@ class Button {
 
     
     deselect = () => {
+        this.element.style.backgroundColor = "transparent";
+        this.element.style.boxShadow = "none";
     }
 }

@@ -39,8 +39,9 @@ triggerBeat = (event) => {
     console.log(event);
      const Keycode = event.Keycode;
      if(Keycode in beats){
-         let beat = beats[Keycode];
+         let keyPress = beats[Keycode];
          keyPress.beat.play()
+         keyPress.button.select();
      }
 }
 
